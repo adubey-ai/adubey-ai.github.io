@@ -178,15 +178,18 @@
         </div>
         <p class="subtitle">ACM Winter School Hackathon · Arduino NICLA Vision</p>
         <p>
-          Real-time hazard detection and alert system for two-wheelers running on
-          <strong>Arduino NICLA Vision</strong>. Edge-based visual inference warns riders of road
-          obstacles with low-latency, energy-efficient on-device AI.
+          Dual-IMU hazard detection for two-wheelers — helmet-mounted
+          <strong>Arduino NICLA Vision</strong> + smartphone — that classifies rider motion
+          into safe riding vs. falls / sudden jerks using windowed features from
+          accelerometer and gyroscope signals.
         </p>
+        <p class="results"><span>Results:</span> <strong>100% test accuracy</strong> on falling-vs-riding (28-sample held-out set) with both Decision Tree and a tiny <strong>89-parameter (~360 B)</strong> NN — small enough for on-device inference on the microcontroller.</p>
         <div class="tag-row">
           <span class="tag">MicroPython</span>
-          <span class="tag">PyTorch</span>
+          <span class="tag">Keras</span>
+          <span class="tag">scikit-learn</span>
           <span class="tag">Edge AI</span>
-          <span class="tag">Decision Tree</span>
+          <span class="tag">IMU</span>
         </div>
       </article>
 
@@ -204,6 +207,7 @@
           geometric consistency — improving depth prediction accuracy and edge detection over
           standard baselines by better capturing 3D spatial relationships.
         </p>
+        <p class="results"><span>Results:</span> 4 loss terms (scale-invariant log, multi-scale gradient matching, edge-aware smoothness, surface-normal consistency) validated end-to-end; ResNet-18 U-Net backbone with verified homomorphism of loss components.</p>
         <div class="tag-row">
           <span class="tag">PyTorch</span>
           <span class="tag">OpenCV</span>
