@@ -247,9 +247,10 @@
         <p>
           Matching engine where each GPU thread block owns one independent limit order book,
           running thousands of perturbed scenarios in parallel to estimate distributions of
-          execution outcomes (fill rate, slippage) under calibrated Hawkes-driven order flow.
+          execution outcomes under calibrated Hawkes-driven order flow. Implements TWAP and
+          MarketOrder execution strategies with paired statistical comparison.
         </p>
-        <p class="results"><span>Results:</span> counterfactual replay shows arriving <strong>5 ms later yields 51% fill rate vs 34%</strong> at baseline, at the cost of higher p99 slippage — the latency/fill tradeoff HFT desks quantify.</p>
+        <p class="results"><span>Results:</span> TWAP beats MarketOrder by <strong>+24.90 bps</strong> in implementation shortfall with 95% CI [+19.8, +30.0] over 60 paired scenarios — statistically significant with zero CI overlap. Fill rate rises 36% → 54% as arrival offset varies from −10 ms to +10 ms.</p>
         <div class="tag-row">
           <span class="tag">CUDA</span>
           <span class="tag">C++</span>
@@ -268,11 +269,11 @@
         <p class="subtitle">ML for Finance · Transformers · Interpretability</p>
         <p>
           Short-horizon price prediction from LOB events using a transformer whose attention
-          window is a <strong>learnable time-decay</strong> over physical event gaps rather
-          than a fixed K tokens — extending my Intel SWFA work to microstructure data and
-          exposing an interpretable per-head "effective memory horizon".
+          window is a <strong>learnable per-head time-decay</strong> over physical event gaps
+          rather than a fixed K tokens — extending my Intel SWFA work to microstructure data
+          and exposing an interpretable "effective memory horizon" per head.
         </p>
-        <p class="results"><span>Results:</span> on synthetic data with a 0.3s momentum half-life, SWFA heads <strong>recovered an effective memory horizon of ~0.4s</strong> without supervision — the model discovers the underlying microstructure timescale from data.</p>
+        <p class="results"><span>Results:</span> on regime-switching synthetic LOB (τ ∈ {0.08, 0.4, 1.8}s), <strong>3-way multi-seed comparison</strong> (SWFA / Vanilla Transformer / DeepLOB) with 95% CIs; SWFA is competitive on accuracy (0.414 vs 0.427) and uniquely produces <strong>interpretable per-head memory horizons</strong> matching true data timescales.</p>
         <div class="tag-row">
           <span class="tag">PyTorch</span>
           <span class="tag">Transformer</span>
