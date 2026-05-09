@@ -31,7 +31,7 @@
     <p class="eyebrow">Ex-AI Framework Intern @ Intel · M.Tech, IIST (2024–2026)</p>
     <h1>Adarsh Dubey<span class="accent">.</span></h1>
     <p class="tagline">
-      I build <strong>high-performance deep learning systems</strong> —
+      Building the <strong>PyTorch framework bridge</strong> for Intel's AI accelerators —
       distributed training, GPU kernels, and efficient attention algorithms for large language models.
     </p>
     <div class="hero-cta">
@@ -57,20 +57,30 @@
     <div class="grid-2">
       <div class="prose">
         <p>
-          I recently completed my <strong>M.Tech in Machine Learning and Computing</strong> at the
-          Indian Institute of Space Science and Technology (IIST), and wrapped up my internship at
-          <strong>Intel</strong> as an AI Framework Intern.
+          As an <strong>AI Frameworks Intern at Intel</strong>, I contribute to the
+          <strong>PyTorch framework bridge software stack</strong> for Intel's AI accelerators
+          and GPUs — building a robust, performant stack for training and inference workloads,
+          including large language models.
         </p>
         <p>
-          My work sits at the intersection of <em>systems</em> and <em>deep learning</em>:
-          optimizing CUTLASS GPU kernels, designing fault-tolerant distributed training,
-          and building novel attention algorithms that cut computation without losing accuracy.
+          I recently completed my <strong>M.Tech in Machine Learning and Computing</strong>
+          at the Indian Institute of Space Science and Technology (ISRO), Trivandrum, on a
+          foundation of mathematics (MSc) and big-data analytics (PG Diploma). My work spans
+          GPU kernel optimization (CUTLASS / CUTE), fault-tolerant distributed training, and
+          novel attention algorithms that cut compute without losing accuracy.
         </p>
         <p>
-          I care about making large-model training faster, cheaper, and greener. I'm currently
-          looking for full-time roles as an <strong>ML Systems Engineer</strong>,
-          <strong>Applied Scientist</strong>, or <strong>Research Engineer</strong> —
-          and I'm also open to PhD opportunities in efficient AI systems.
+          Projects across the journey — from <em>Process Mining for Bank Loans</em>
+          (20% faster processing) to <em>Cancer Survival Prediction</em>,
+          <em>Market Basket Analysis</em>, and my thesis on high-performance LLM training —
+          reflect a consistent interest in using data-driven methods for high-impact
+          domains: AI, healthcare, and space.
+        </p>
+        <p>
+          I'm currently looking for full-time roles as an
+          <strong>ML Systems Engineer</strong>, <strong>Applied Scientist</strong>, or
+          <strong>Research Engineer</strong>, and I'm also open to PhD opportunities in
+          efficient AI systems.
         </p>
       </div>
       <aside class="quick-facts">
@@ -218,6 +228,56 @@
           <span class="tag">OpenCV</span>
           <span class="tag">ResNet</span>
           <span class="tag">NumPy</span>
+        </div>
+      </article>
+
+    </div>
+
+    <h3 class="sub-h">Quant &amp; HFT</h3>
+    <div class="projects">
+
+      <article class="project">
+        <div class="project-head">
+          <h3>
+            GPU-Native LOB Simulator with Stochastic Replay
+            <a class="code-link" href="https://github.com/adubey-ai/gpu-lob-simulator" target="_blank" rel="noopener" aria-label="View code on GitHub">&lt;/&gt;</a>
+          </h3>
+        </div>
+        <p class="subtitle">Market Microstructure · CUDA · Hawkes Processes</p>
+        <p>
+          Matching engine where each GPU thread block owns one independent limit order book,
+          running thousands of perturbed scenarios in parallel to estimate distributions of
+          execution outcomes (fill rate, slippage) under calibrated Hawkes-driven order flow.
+        </p>
+        <p class="results"><span>Results:</span> counterfactual replay shows arriving <strong>5 ms later yields 51% fill rate vs 34%</strong> at baseline, at the cost of higher p99 slippage — the latency/fill tradeoff HFT desks quantify.</p>
+        <div class="tag-row">
+          <span class="tag">CUDA</span>
+          <span class="tag">C++</span>
+          <span class="tag">Market Microstructure</span>
+          <span class="tag">Hawkes Processes</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>
+            Time-Decayed Sliding-Window Attention for LOB
+            <a class="code-link" href="https://github.com/adubey-ai/lob-attention" target="_blank" rel="noopener" aria-label="View code on GitHub">&lt;/&gt;</a>
+          </h3>
+        </div>
+        <p class="subtitle">ML for Finance · Transformers · Interpretability</p>
+        <p>
+          Short-horizon price prediction from LOB events using a transformer whose attention
+          window is a <strong>learnable time-decay</strong> over physical event gaps rather
+          than a fixed K tokens — extending my Intel SWFA work to microstructure data and
+          exposing an interpretable per-head "effective memory horizon".
+        </p>
+        <p class="results"><span>Results:</span> on synthetic data with a 0.3s momentum half-life, SWFA heads <strong>recovered an effective memory horizon of ~0.4s</strong> without supervision — the model discovers the underlying microstructure timescale from data.</p>
+        <div class="tag-row">
+          <span class="tag">PyTorch</span>
+          <span class="tag">Transformer</span>
+          <span class="tag">Sparse Attention</span>
+          <span class="tag">Quant Research</span>
         </div>
       </article>
 
