@@ -342,6 +342,23 @@ code {
   margin: 0;
   font-size: 1.08rem;
   color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.code-link {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+.code-link:hover {
+  background: rgba(100,255,218,0.12);
+  color: var(--accent);
 }
 .project .subtitle {
   margin: 0 0 10px;
