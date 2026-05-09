@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Adarsh Dubey — ML Systems Engineer</title>
+<meta name="description" content="Adarsh Dubey — M.Tech in ML & Computing at IIST, AI Framework Intern at Intel. Working on high-performance deep learning systems, distributed training, and GPU kernels." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">AD<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">AI Framework Intern @ Intel · M.Tech @ IIST</p>
+    <h1>Adarsh Dubey<span class="accent">.</span></h1>
+    <p class="tagline">
+      I build <strong>high-performance deep learning systems</strong> —
+      distributed training, GPU kernels, and efficient attention algorithms for large language models.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#projects">View Projects</a>
+      <a class="btn btn-ghost" href="mailto:adarshiist@gmail.com">Get in touch</a>
+    </div>
+    <div class="hero-meta">
+      <span><span class="dot"></span> Bangalore, India</span>
+      <span>·</span>
+      <span>Pursuing PhD in Efficient AI Systems</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="about" class="section">
+  <div class="section-inner">
+    <h2><span class="num">01.</span> About</h2>
+    <div class="grid-2">
+      <div class="prose">
+        <p>
+          I'm a Master's student in <strong>Machine Learning and Computing</strong> at the
+          Indian Institute of Space Science and Technology (IIST), currently interning at
+          <strong>Intel</strong> as an AI Framework Operator.
+        </p>
+        <p>
+          My work sits at the intersection of <em>systems</em> and <em>deep learning</em>:
+          optimizing CUTLASS GPU kernels, designing fault-tolerant distributed training,
+          and building novel attention algorithms that cut computation without losing accuracy.
+        </p>
+        <p>
+          I care about making large-model training faster, cheaper, and greener — and I'm headed
+          toward a PhD to keep pushing on that problem.
+        </p>
+      </div>
+      <aside class="quick-facts">
+        <h3>Quick facts</h3>
+        <ul>
+          <li><span>Role</span><strong>AI Framework Intern, Intel</strong></li>
+          <li><span>Program</span><strong>M.Tech ML &amp; Computing, IIST</strong></li>
+          <li><span>Focus</span><strong>GPU systems · LLMs · Distributed training</strong></li>
+          <li><span>GATE</span><strong>Mathematics, Rank 245 (2024)</strong></li>
+          <li><span>Next</span><strong>PhD — Efficient AI Systems</strong></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section alt">
+  <div class="section-inner">
+    <h2><span class="num">02.</span> Experience</h2>
+    <article class="exp-card">
+      <header class="exp-header">
+        <div>
+          <h3>AI Framework Operator Intern</h3>
+          <p class="company">Intel Corporation · Bangalore, India</p>
+        </div>
+        <span class="date">June 2025 — Present</span>
+      </header>
+      <ul class="bullets">
+        <li>
+          Conducted extensive testing and validation of <strong>TorchFT (PyTorch Fault Tolerance)</strong>
+          on Intel XPU architecture, ensuring robust distributed training and seamless fault recovery for production AI workloads.
+        </li>
+        <li>
+          Implemented and optimized distributed training strategies including
+          <strong>DeepSpeed ZeRO</strong> and <strong>FSDP</strong> for scalable LLM training,
+          achieving <strong>93.8% GPU utilization</strong> across multi-GPU configurations.
+        </li>
+        <li>
+          Optimized compile-time performance for <strong>CUTLASS Xe_gemm</strong> operations
+          and maintained AI framework compatibility across Intel Xe series GPUs.
+        </li>
+        <li>
+          Presented a technical deep-dive on <strong>CUTE / CUTLASS tensor layout mapping</strong>
+          and memory optimization, covering HBM-to-SLM data movement and physical memory management
+          for GPU workloads, to the CUTLASS Infra team.
+        </li>
+        <li>
+          Designed a <strong>Sliding Window Flash Attention</strong> algorithm with an intelligent
+          block classification system — categorizing attention blocks as fully-inside, intersecting,
+          or fully-outside — enabling selective computation and <strong>65% compute savings</strong>
+          for narrow window configurations.
+        </li>
+        <li>
+          Built a proof-of-concept SWFA implementation with per-position masking and numerical accuracy
+          validation, delivering <strong>50% training speedup</strong> while maintaining sub-microsecond
+          precision across 19 test configurations.
+        </li>
+        <li>
+          Contributed <strong>FusedQKNormRope</strong> and <strong>FusedQKRope</strong> kernels to the
+          Intel <code>sglang_xpu_kernel</code> public repository, optimizing XPU performance for SGLang inference.
+        </li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">PyTorch</span>
+        <span class="tag">CUTLASS</span>
+        <span class="tag">DeepSpeed</span>
+        <span class="tag">FSDP</span>
+        <span class="tag">SGLang</span>
+        <span class="tag">Intel XPU</span>
+        <span class="tag">SYCL</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="section-inner">
+    <h2><span class="num">03.</span> Projects</h2>
+    <div class="projects">
+
+      <article class="project">
+        <div class="project-head">
+          <h3>High-Performance DL Software Stack for Scalable LLMs</h3>
+          <span class="date">Jul 2025 — May 2026</span>
+        </div>
+        <p class="subtitle">M.Tech Thesis · Ongoing</p>
+        <p>
+          Building a full software stack for scalable LLM training using distributed strategies
+          (DeepSpeed, FSDP, DDP) and a novel Sliding Window Flash Attention algorithm — targeting
+          <strong>93.8% GPU utilization</strong>, <strong>65% compute savings</strong>, and
+          <strong>40% energy efficiency improvement</strong> across multi-GPU configurations.
+        </p>
+        <div class="tag-row">
+          <span class="tag">PyTorch Distributed</span>
+          <span class="tag">DeepSpeed</span>
+          <span class="tag">vLLM</span>
+          <span class="tag">CUDA Kernels</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Guardian Edge — Hazard Alerts for Two-Wheelers</h3>
+          <span class="date">Dec 2025 — Jan 2026</span>
+        </div>
+        <p class="subtitle">ACM Winter School Hackathon · Arduino NICLA Vision</p>
+        <p>
+          Real-time hazard detection and alert system for two-wheelers running on
+          <strong>Arduino NICLA Vision</strong>. Edge-based visual inference warns riders of road
+          obstacles with low-latency, energy-efficient on-device AI.
+        </p>
+        <div class="tag-row">
+          <span class="tag">MicroPython</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Edge AI</span>
+          <span class="tag">Decision Tree</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Topology-Aware Monocular Depth Estimation</h3>
+          <span class="date">Jan 2025 — May 2025</span>
+        </div>
+        <p class="subtitle">Computer Vision Course Project</p>
+        <p>
+          Monocular depth estimation with custom topology-aware loss functions that enforce
+          geometric consistency — improving depth prediction accuracy and edge detection over
+          standard baselines by better capturing 3D spatial relationships.
+        </p>
+        <div class="tag-row">
+          <span class="tag">PyTorch</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">ResNet</span>
+          <span class="tag">NumPy</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section alt">
+  <div class="section-inner">
+    <h2><span class="num">04.</span> Education</h2>
+    <ul class="timeline">
+      <li>
+        <div class="tl-date">2024 — 2026</div>
+        <div class="tl-body">
+          <h3>Master of Technology, Machine Learning &amp; Computing</h3>
+          <p>Indian Institute of Space Science and Technology, Thiruvananthapuram</p>
+        </div>
+      </li>
+      <li>
+        <div class="tl-date">2022 — 2023</div>
+        <div class="tl-body">
+          <h3>PG Diploma in Big Data Analytics</h3>
+          <p>Jawaharlal Nehru University, New Delhi</p>
+        </div>
+      </li>
+      <li>
+        <div class="tl-date">2019 — 2021</div>
+        <div class="tl-body">
+          <h3>Master of Science</h3>
+          <p>Chhatrapati Sahu Ji Maharaj University, Kanpur</p>
+        </div>
+      </li>
+      <li>
+        <div class="tl-date">2016 — 2019</div>
+        <div class="tl-body">
+          <h3>Bachelor of Science</h3>
+          <p>Chhatrapati Sahu Ji Maharaj University, Kanpur</p>
+        </div>
+      </li>
+    </ul>
+
+    <h3 class="sub-h">Relevant Coursework</h3>
+    <div class="tag-row wide">
+      <span class="tag">Foundations of ML</span>
+      <span class="tag">Advanced ML</span>
+      <span class="tag">Graphical Models &amp; Deep Learning</span>
+      <span class="tag">Reinforcement Learning</span>
+      <span class="tag">Statistical Modelling</span>
+      <span class="tag">Computer Vision</span>
+      <span class="tag">Applied Accelerated AI</span>
+      <span class="tag">Intro to LLMs</span>
+      <span class="tag">GPU Architectures &amp; Programming</span>
+      <span class="tag">Optimization Techniques</span>
+      <span class="tag">Numerical Linear Algebra</span>
+      <span class="tag">BioAlgorithms</span>
+    </div>
+
+    <h3 class="sub-h">Achievements</h3>
+    <ul class="achievements">
+      <li><strong>GATE 2024</strong> — Mathematics, All-India Rank <strong>245</strong></li>
+      <li><strong>ACM Winter School on Edge AI</strong>, IISc — Tiny ML &amp; Embedded DL (2025)</li>
+      <li><strong>Walmart CTE Reinforcement Learning Workshop</strong>, CSA IISc (2026)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="section-inner">
+    <h2><span class="num">05.</span> Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-block">
+        <h3>Languages</h3>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">CUDA</span>
+          <span class="tag">SYCL</span>
+          <span class="tag">Bash</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h3>AI / ML Systems</h3>
+        <div class="tag-row">
+          <span class="tag">PyTorch</span>
+          <span class="tag">DeepSpeed</span>
+          <span class="tag">vLLM</span>
+          <span class="tag">SGLang</span>
+          <span class="tag">FSDP</span>
+          <span class="tag">Distributed Training</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h3>GPU &amp; Kernels</h3>
+        <div class="tag-row">
+          <span class="tag">CUTLASS</span>
+          <span class="tag">CUTE</span>
+          <span class="tag">Flash Attention</span>
+          <span class="tag">CUDA Kernels</span>
+          <span class="tag">Intel XPU</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h3>Foundations</h3>
+        <div class="tag-row">
+          <span class="tag">ML Algorithms</span>
+          <span class="tag">Optimization</span>
+          <span class="tag">Linear Algebra</span>
+          <span class="tag">Statistical Modelling</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section alt contact">
+  <div class="section-inner">
+    <h2><span class="num">06.</span> Get in touch</h2>
+    <p class="contact-lead">
+      Open to PhD positions, research collaborations, and conversations about GPU systems,
+      efficient LLMs, and distributed training.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:adarshiist@gmail.com">adarshiist@gmail.com</a>
+      <a href="https://github.com/adarshdubey" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/adarshdwivedi" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="tel:+919956549848">+91 99565 49848</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Adarsh Dubey · Built with plain HTML &amp; CSS</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
