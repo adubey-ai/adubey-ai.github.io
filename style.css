@@ -384,6 +384,19 @@ code {
   margin-right: 6px;
 }
 .project p.results strong { color: var(--text); }
+.project p.deep-link {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  font-family: var(--mono);
+}
+.project p.deep-link a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.project p.deep-link a:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
 
 /* ---------- Timeline ---------- */
 .timeline {
