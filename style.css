@@ -319,6 +319,25 @@ a:hover { color: var(--accent-2); }
   flex-wrap: wrap;
 }
 .exp-header h3 { margin: 0 0 4px; font-size: 1.2rem; }
+.intern-note {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-family: var(--mono);
+  vertical-align: 2px;
+}
+.quick-facts .intern-note {
+  display: block;
+  margin-left: 0;
+  margin-top: 4px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.78rem;
+}
 .company { margin: 0; color: var(--accent); font-size: 0.95rem; }
 .date {
   color: var(--text-dim);
