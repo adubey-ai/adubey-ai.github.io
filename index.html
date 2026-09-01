@@ -243,6 +243,40 @@
         </div>
       </article>
 
+      <article class="project project-wide">
+        <div class="award-label">Hackathon Winner — IISc ACM SysML 2.0</div>
+        <div class="project-head">
+          <h3>
+            Centralized to Federated Edge Learning on a Raspberry Pi Cluster
+            <a class="code-link" href="https://iisc.acm.org/sysml-workshop-2026/" target="_blank" rel="noopener" aria-label="Workshop on Systems for Machine Learning 2026">↗</a>
+          </h3>
+          <span class="date">June 2026</span>
+        </div>
+        <p class="subtitle">Workshop on Systems for ML, CDS, IISc · Flotilla FL · FedProx / FedAvg</p>
+        <p>
+          Took three CNN backbones from a centralized GPU baseline to a live
+          <strong>4-node Raspberry Pi federated cluster</strong> — training AlexNet, VGG16, and
+          ResNet101 on 2× Tesla T4, then redeploying under the <strong>Flotilla</strong> FL
+          framework with MQTT + Redis orchestration, Docker nodes, and non-IID client splits.
+        </p>
+        <div class="metric-row" aria-label="Project scale">
+          <span><strong>3</strong> CNN backbones</span>
+          <span><strong>4</strong> Raspberry Pi nodes</span>
+          <span><strong>10</strong> federated rounds</span>
+        </div>
+        <p class="results"><span>Centralized:</span> ResNet101 reached <strong>95.20%</strong> validation accuracy; cosine-annealed LR, AMP, and label smoothing lifted AlexNet <strong>+11.1%</strong> and ResNet101 <strong>+14.8%</strong> over the default-config baseline.</p>
+        <p class="results"><span>Federated:</span> <strong>FedProx 77.3%</strong> versus FedAvg 72.1% across 10 rounds on the Pi cluster, warm-started from the centralized checkpoint at ~1.34 GB communication per round.</p>
+        <p class="results"><span>Deployment call:</span> AlexNet shipped to the edge — fastest to train (0.83 h vs ResNet101's 2.73 h) and the tightest cross-dataset generalization gap (<strong>13.5%</strong> vs 17.6%), so the most accurate model was not the deployable one.</p>
+        <div class="tag-row">
+          <span class="tag">Federated Learning</span>
+          <span class="tag">FedProx</span>
+          <span class="tag">Flotilla</span>
+          <span class="tag">Raspberry Pi</span>
+          <span class="tag">MQTT / Redis</span>
+          <span class="tag">Edge AI</span>
+        </div>
+      </article>
+
       <article class="project">
         <div class="project-head">
           <h3>High-Performance DL Software Stack for Scalable LLMs</h3>
@@ -492,13 +526,12 @@
 
     <h3 class="sub-h">Workshops &amp; Achievements</h3>
     <ul class="achievements">
-      <li><strong>Hackathon Winner</strong> — <strong>ML Sys 2.0 Workshop</strong>, ACM Chapter, CDS, IISc</li>
+      <li><strong>Hackathon Winner</strong> — <a href="https://iisc.acm.org/sysml-workshop-2026/" target="_blank" rel="noopener">Workshop on Systems for Machine Learning (ML Sys 2.0)</a>, IISc ACM Student Chapter, CDS, IISc (June 2026)</li>
       <li><strong>Claude Certified Architect: Foundations (CCAF)</strong> — Anthropic</li>
       <li><strong>GATE 2024</strong> — Mathematics, All-India Rank <strong>245</strong></li>
       <li><strong>Workshop on Systems for LLMs</strong>, CSE, IIT Bombay</li>
       <li><strong>Workshop on Numerical Linear Algebra in Quantum Computing &amp; ML</strong>, CDS, IISc</li>
       <li><strong>One-Day Hands-on Workshop on Large Language Models</strong>, IIST (ISRO)</li>
-      <li><strong>ML Sys 2.0 Workshop</strong>, ACM Chapter, CDS, IISc — systems for modern ML</li>
       <li><strong>ACM Winter School on Edge AI</strong>, IISc — Tiny ML &amp; Embedded DL (2025)</li>
       <li><strong>Walmart CTE Reinforcement Learning Workshop</strong>, CSA, IISc (2026)</li>
     </ul>
@@ -531,6 +564,7 @@
           <span class="tag">SGLang</span>
           <span class="tag">LLM Inference</span>
           <span class="tag">Distributed Training</span>
+          <span class="tag">Federated Learning</span>
         </div>
       </div>
       <div class="skill-block">
