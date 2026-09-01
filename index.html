@@ -298,23 +298,31 @@
         </div>
       </article>
 
-      <article class="project">
+      <article class="project project-wide">
         <div class="project-head">
-          <h3>High-Performance DL Software Stack for Scalable LLMs</h3>
+          <h3>High-Performance DL Software Stack for Scalable and Efficient LLMs</h3>
           <span class="date">Jul 2025 — May 2026</span>
         </div>
-        <p class="subtitle">M.Tech Thesis · Completed</p>
+        <p class="subtitle">M.Tech Thesis · IIST · Completed</p>
         <p>
-          Built a full software stack for scalable LLM training using distributed strategies
-          (DeepSpeed, FSDP, DDP) and a novel Sliding Window Flash Attention algorithm,
-          targeting multi-GPU configurations.
+          The academic half of my Intel work: a training stack for large language models that
+          pairs distributed execution (<strong>DeepSpeed ZeRO, FSDP, DDP</strong>) with
+          <strong>Sliding Window Flash Attention</strong> — an attention kernel that labels every
+          block as fully-inside, intersecting, or fully-outside the causal window, then computes
+          only the blocks that can contribute. The thesis derives the masking, proves the
+          numerics hold, and measures what the sparsity is actually worth.
         </p>
-        <p class="results"><span>Results:</span> <strong>93.8% GPU utilization</strong>, <strong>65% compute savings</strong> via SWFA block classification, and <strong>40% energy-efficiency improvement</strong> over the distributed-training baseline.</p>
+        <p class="results"><span>Efficiency:</span> <strong>93.8% GPU utilization</strong> across multi-GPU configurations, <strong>65% compute savings</strong> from block classification in narrow-window regimes, and a <strong>40% energy-efficiency improvement</strong> over the dense distributed-training baseline.</p>
+        <p class="results"><span>Numerics:</span> per-position masking validated to sub-microsecond agreement with dense attention across <strong>19 test configurations</strong> — the savings come from skipped blocks, not from an approximation.</p>
+        <p class="results"><span>Scope note:</span> this is the same body of work as the Intel SWFA effort — the internship shipped and productionized it, the thesis formalizes and evaluates it. The shared figures are one result reported twice, not two.</p>
+        <p class="source-note">Thesis and kernel source are in private repositories — available on request.</p>
         <div class="tag-row">
           <span class="tag">PyTorch Distributed</span>
-          <span class="tag">DeepSpeed</span>
-          <span class="tag">vLLM</span>
+          <span class="tag">DeepSpeed ZeRO</span>
+          <span class="tag">FSDP</span>
+          <span class="tag">Flash Attention</span>
           <span class="tag">CUDA Kernels</span>
+          <span class="tag">Sparse Attention</span>
         </div>
       </article>
 

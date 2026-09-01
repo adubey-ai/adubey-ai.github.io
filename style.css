@@ -560,6 +560,12 @@ code {
   font-size: 0.82rem;
   font-family: var(--mono);
 }
+.project p.source-note {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  font-family: var(--mono);
+  color: var(--text-dim);
+}
 .project p.deep-link a {
   color: var(--accent);
   text-decoration: none;
