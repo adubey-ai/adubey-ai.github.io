@@ -537,7 +537,10 @@ code {
 .skill-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 860px) {
+  .skill-grid { grid-template-columns: 1fr; }
 }
 .skill-block {
   background: var(--surface);
