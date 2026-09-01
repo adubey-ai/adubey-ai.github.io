@@ -416,21 +416,23 @@ code {
 .project-head {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
+  align-items: baseline;
+  gap: 10px 16px;
   margin-bottom: 6px;
   flex-wrap: wrap;
 }
+.project-head .date { flex-shrink: 0; }
 .project h3 {
   margin: 0;
   font-size: 1.08rem;
   color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
+  line-height: 1.45;
 }
 .code-link {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: 2px;
+  white-space: nowrap;
   font-family: var(--mono);
   font-size: 0.7rem;
   padding: 2px 6px;
@@ -449,7 +451,11 @@ code {
   color: var(--accent);
   font-family: var(--mono);
 }
-.project p { color: var(--text-soft); font-size: 0.95rem; margin: 0 0 auto; }
+.project p { color: var(--text-soft); font-size: 0.95rem; margin: 0 0 12px; }
+.project .tag-row {
+  margin-top: auto;
+  padding-top: 18px;
+}
 .project p.results {
   margin-top: 10px;
   padding: 8px 10px;
