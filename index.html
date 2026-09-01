@@ -140,11 +140,6 @@
           inference.
         </li>
         <li>
-          Ported <strong>sliding-window FlashAttention</strong> with block classification
-          (fully-inside, intersecting, fully-outside) so only live context is computed,
-          cutting DRAM traffic and KV-cache pressure in narrow-window / long-context serving.
-        </li>
-        <li>
           Started <strong>TI TDA54 software optimization</strong> on the TDA5 automotive SoC
           (C7 NPU + heterogeneous CPU/DSP fabric): profiling transformer and LLM/VLM kernels,
           mapping tiled matmul and attention onto on-chip SRAM/DRAM, and tightening
@@ -211,10 +206,14 @@
         <li>
           Ran vendor-neutral <strong>LLM inference benchmarking</strong> of 7B–70B models on
           <strong>Intel Gaudi2 vs Gaudi3</strong> through the vLLM Habana fork, logging TTFT,
-          inter-token latency, throughput, and <code>hl-smi</code> power to compare serving
-          cost — <strong>7,199</strong> prompt-level measurements across <strong>36</strong>
-          device configurations, with Gaudi3 leading throughput (up to <strong>+38%</strong>)
-          while Gaudi2 remained the energy-optimal choice (<strong>1.9×</strong> better J/token).
+          inter-token latency, throughput, and <code>hl-smi</code> power —
+          <strong>7,199</strong> prompt-level measurements across <strong>36</strong>
+          device configurations.
+        </li>
+        <li>
+          The same Gaudi study showed a split optimum: Gaudi3 led serving throughput
+          (up to <strong>+38%</strong> tok/s) while Gaudi2 remained the energy-optimal
+          choice (<strong>1.9×</strong> better energy per token).
         </li>
       </ul>
       <div class="tag-row">
@@ -391,7 +390,10 @@
 
       <article class="project project-wide">
         <div class="project-head">
-          <h3>IASW — Agentic Document Verification with a Human-in-the-Loop Boundary</h3>
+          <h3>
+            IASW — Agentic Document Verification with a Human-in-the-Loop Boundary
+            <a class="code-link" href="https://github.com/adubey-ai/iasw-agentic-ai" target="_blank" rel="noopener" aria-label="View IASW source on GitHub">&lt;/&gt;</a>
+          </h3>
           <span class="date">May 2026</span>
         </div>
         <p class="subtitle">Multi-Agent Orchestration · Local Multimodal LLM · Banking Workflow</p>
