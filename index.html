@@ -352,6 +352,43 @@
 
     </div>
 
+    <h3 class="sub-h">Agentic AI &amp; GenAI</h3>
+    <div class="projects">
+
+      <article class="project project-wide">
+        <div class="project-head">
+          <h3>IASW — Agentic Document Verification with a Human-in-the-Loop Boundary</h3>
+          <span class="date">May 2026</span>
+        </div>
+        <p class="subtitle">Multi-Agent Orchestration · Local Multimodal LLM · Banking Workflow</p>
+        <p>
+          An agentic system that automates the manual "Maker" role in core-banking account
+          changes while keeping the human "Checker" as the only write authority. Staff submit a
+          legal name-change request with supporting documents; a pipeline of agents validates the
+          request, extracts fields from the document image, scores the match, and hands a
+          reviewable summary to a human — running entirely on a <strong>local
+          Qwen2.5-VL-7B-Instruct</strong> with no external API calls.
+        </p>
+        <div class="metric-row" aria-label="System scale">
+          <span><strong>4</strong> specialized agents</span>
+          <span><strong>7B</strong> local vision-language model</span>
+          <span><strong>0</strong> external API calls</span>
+        </div>
+        <p class="results"><span>Agent pipeline:</span> Validation → Document Processor (Tesseract OCR + VLM field extraction + forgery check) → Confidence Scorer → Summary, each with typed Pydantic contracts and a full SQLite audit trail.</p>
+        <p class="results"><span>HITL boundary:</span> the RPS write call is reachable from <em>only</em> the checker-decision endpoint, so no agent can commit a change autonomously — the constraint is enforced in code, not in a prompt.</p>
+        <p class="results"><span>Design call:</span> chose a local 7B VLM over a hosted frontier API because data locality was the binding compliance requirement — sensitive documents never leave the host, and inference carries no per-token cost.</p>
+        <div class="tag-row">
+          <span class="tag">Agentic AI</span>
+          <span class="tag">Qwen2.5-VL</span>
+          <span class="tag">Multimodal LLM</span>
+          <span class="tag">Human-in-the-Loop</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Document AI</span>
+        </div>
+      </article>
+
+    </div>
+
     <h3 class="sub-h">Quant &amp; HFT</h3>
     <div class="projects">
 
@@ -548,15 +585,13 @@
     <h2><span class="num">05.</span> Skills</h2>
     <div class="skill-grid">
       <div class="skill-block">
-        <h3>Languages &amp; Tools</h3>
+        <h3>Languages</h3>
         <div class="tag-row">
           <span class="tag">Python</span>
           <span class="tag">C++</span>
           <span class="tag">CUDA</span>
           <span class="tag">SYCL</span>
           <span class="tag">Bash</span>
-          <span class="tag">Git</span>
-          <span class="tag">Linux</span>
         </div>
       </div>
       <div class="skill-block">
@@ -596,6 +631,18 @@
         </div>
       </div>
       <div class="skill-block">
+        <h3>Agentic AI &amp; GenAI</h3>
+        <div class="tag-row">
+          <span class="tag">Agentic Workflows</span>
+          <span class="tag">Agent Orchestration</span>
+          <span class="tag">Human-in-the-Loop</span>
+          <span class="tag">Multimodal VLMs</span>
+          <span class="tag">Qwen2.5-VL</span>
+          <span class="tag">Claude / CCAF</span>
+          <span class="tag">FastAPI</span>
+        </div>
+      </div>
+      <div class="skill-block">
         <h3>Edge &amp; Systems</h3>
         <div class="tag-row">
           <span class="tag">Raspberry Pi</span>
@@ -613,8 +660,20 @@
           <span class="tag">Numerical Linear Algebra</span>
           <span class="tag">Optimization</span>
           <span class="tag">Causal ML</span>
-          <span class="tag">Agent Systems</span>
-          <span class="tag">CCAF (Anthropic)</span>
+          <span class="tag">Probability &amp; Statistics</span>
+          <span class="tag">Graph Theory</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h3>Tools</h3>
+        <div class="tag-row">
+          <span class="tag">Git</span>
+          <span class="tag">Linux</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">scikit-learn</span>
         </div>
       </div>
     </div>
