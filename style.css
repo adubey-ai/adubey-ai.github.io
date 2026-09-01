@@ -319,6 +319,13 @@ a:hover { color: var(--accent-2); }
   flex-wrap: wrap;
 }
 .exp-header h3 { margin: 0 0 4px; font-size: 1.2rem; }
+.exp-header .intern-note {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+  vertical-align: baseline;
+}
 .intern-note {
   display: inline-block;
   margin-left: 8px;
