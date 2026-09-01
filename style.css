@@ -330,6 +330,58 @@ code {
   transform: translateY(-4px);
   border-color: var(--accent);
 }
+.project-featured {
+  grid-column: 1 / -1;
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(100,255,218,0.45);
+  background:
+    linear-gradient(135deg, rgba(100,255,218,0.08), transparent 45%),
+    var(--surface);
+}
+.project-featured::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -70px;
+  top: -80px;
+  border-radius: 50%;
+  background: rgba(124,156,255,0.12);
+  filter: blur(4px);
+  pointer-events: none;
+}
+.featured-label {
+  align-self: flex-start;
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  border: 1px solid rgba(100,255,218,0.45);
+  border-radius: 20px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.metric-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.metric-row span {
+  padding: 8px 12px;
+  background: rgba(124,156,255,0.09);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-soft);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+.metric-row strong {
+  color: var(--accent);
+  font-size: 1rem;
+}
 .project-head {
   display: flex;
   justify-content: space-between;
