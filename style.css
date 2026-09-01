@@ -238,6 +238,11 @@ a:hover { color: var(--accent-2); }
 }
 
 /* ---------- Experience ---------- */
+.exp-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .exp-card {
   background: var(--surface);
   border: 1px solid var(--border);
