@@ -208,6 +208,14 @@
           Intel <a href="https://github.com/adubey-ai/sgl-kernel-xpu" target="_blank" rel="noopener"><code>sglang_xpu_kernel</code></a>
           public repository, optimizing XPU performance for SGLang inference.
         </li>
+        <li>
+          Ran vendor-neutral <strong>LLM inference benchmarking</strong> of 7B–70B models on
+          <strong>Intel Gaudi2 vs Gaudi3</strong> through the vLLM Habana fork, logging TTFT,
+          inter-token latency, throughput, and <code>hl-smi</code> power to compare serving
+          cost — <strong>7,199</strong> prompt-level measurements across <strong>36</strong>
+          device configurations, with Gaudi3 leading throughput (up to <strong>+38%</strong>)
+          while Gaudi2 remained the energy-optimal choice (<strong>1.9×</strong> better J/token).
+        </li>
       </ul>
       <div class="tag-row">
         <span class="tag">PyTorch</span>
@@ -215,7 +223,9 @@
         <span class="tag">DeepSpeed</span>
         <span class="tag">FSDP</span>
         <span class="tag">SGLang</span>
+        <span class="tag">vLLM</span>
         <span class="tag">Intel XPU</span>
+        <span class="tag">Intel Gaudi</span>
         <span class="tag">SYCL</span>
       </div>
     </article>
