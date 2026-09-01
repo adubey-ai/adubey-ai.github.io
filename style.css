@@ -10,6 +10,7 @@
   --text-soft: #c4cbe5;
   --accent: #64ffda;
   --accent-2: #7c9cff;
+  --gold: #ffd166;
   --radius: 12px;
   --max-w: 1080px;
   --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
@@ -338,16 +339,27 @@ code {
 .project-wide { grid-column: 1 / -1; }
 .award-label {
   align-self: flex-start;
-  margin-bottom: 12px;
-  padding: 4px 10px;
-  border: 1px solid rgba(124,156,255,0.5);
+  margin-bottom: 14px;
+  padding: 6px 14px;
+  border: 1px solid rgba(255,209,102,0.55);
   border-radius: 20px;
-  background: rgba(124,156,255,0.1);
-  color: var(--accent-2);
+  background: rgba(255,209,102,0.12);
+  color: var(--gold);
   font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+.project-award {
+  border-color: rgba(255,209,102,0.4);
+  background:
+    linear-gradient(135deg, rgba(255,209,102,0.07), transparent 45%),
+    var(--surface);
+}
+.project-award:hover { border-color: var(--gold); }
+.hero-award {
+  color: var(--gold);
+  font-weight: 500;
 }
 .project-featured {
   grid-column: 1 / -1;
