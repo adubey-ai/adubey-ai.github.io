@@ -167,23 +167,26 @@
         <div class="featured-label">Featured systems benchmark</div>
         <div class="project-head">
           <h3>
-            Benchmarking LLMs on Intel Habana Gaudi
+            LLM Inference Benchmarking — Intel Gaudi2 vs Gaudi3
             <a class="code-link" href="https://github.com/adubey-ai/Benchmarking-llms-on-gaudi" target="_blank" rel="noopener" aria-label="View Gaudi benchmarking project on GitHub">&lt;/&gt;</a>
           </h3>
         </div>
-        <p class="subtitle">LLM Inference · Accelerator Evaluation · Reproducible Systems Research</p>
+        <p class="subtitle">vLLM Serving · Latency / Throughput / Energy · Accelerator Evaluation</p>
         <p>
-          Built a vendor-neutral benchmarking suite for dense, Mixture-of-Experts, and
-          vision-language models across <strong>Intel Gaudi2 and Gaudi3</strong> accelerators.
-          The project brings benchmark scripts, profiling traces, analysis notebooks, and
-          deployment-oriented comparisons into one reproducible workflow.
+          Vendor-neutral inference benchmarking of dense, Mixture-of-Experts, and vision-language
+          models across <strong>Intel Gaudi2 and Gaudi3</strong> — serving models through the
+          <strong>vLLM Habana fork</strong>, DeepSpeed, and Optimum Habana while logging per-token
+          latency alongside <code>hl-smi</code> power traces to derive energy cost per token.
         </p>
-        <div class="metric-row" aria-label="Project scope">
-          <span><strong>7</strong> models</span>
+        <div class="metric-row" aria-label="Benchmark scale">
+          <span><strong>7,199</strong> prompt-level measurements</span>
+          <span><strong>36</strong> device configurations</span>
+          <span><strong>7</strong> models · 7B → 70B</span>
           <span><strong>2</strong> accelerator generations</span>
-          <span><strong>5</strong> core metrics</span>
         </div>
-        <p class="results"><span>Evaluates:</span> time to first token, inter-token latency, throughput, energy per token, energy-delay product, and multi-card scaling.</p>
+        <p class="results"><span>Throughput:</span> Gaudi3 leads across model families — <strong>+22%</strong> on Mistral-7B (109.6 → <strong>134.0 tok/s</strong>), <strong>+38%</strong> on Llama2-7B (78.8 → 109.0 tok/s), and <strong>+27%</strong> on Llama3.1-70B multi-card (41.8 → 53.2 tok/s).</p>
+        <p class="results"><span>Latency:</span> inter-token latency falls <strong>19%</strong> on Gaudi3 (9.11 → <strong>7.40 ms</strong>) at a steady-state <strong>~26 ms TTFT</strong>, sustaining interactive-grade token streaming for 7B serving.</p>
+        <p class="results"><span>Energy trade-off:</span> Gaudi2 delivers <strong>1.9× better energy per token</strong> (2.27 vs 4.35 J/token on Mistral-7B) — the throughput-optimal and energy-optimal deployment are <strong>not the same hardware</strong>.</p>
         <div class="tag-row">
           <span class="tag">Intel Gaudi</span>
           <span class="tag">vLLM</span>
