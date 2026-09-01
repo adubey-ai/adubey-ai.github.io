@@ -252,6 +252,16 @@ a:hover { color: var(--accent-2); }
   font-weight: 600;
 }
 
+.archive-line {
+  margin: 36px 0 0;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+.archive-line a { color: var(--text-soft); }
+.archive-line a:hover { color: var(--accent); }
+
 /* ---------- About ---------- */
 .grid-2 {
   display: grid;
