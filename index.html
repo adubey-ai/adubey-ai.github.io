@@ -51,7 +51,7 @@
     <p class="tagline">
       Building <strong>LLM inference kernels</strong> and memory-efficient attention —
       from Tenstorrent TT-Metal FlashAttention to automotive SoC software on TI TDA54 —
-      and the <strong>agentic AI</strong> workloads that run on top of them.
+      plus <strong>FarmPilot</strong> multi-agent systems for board-farm test orchestration.
     </p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#projects">View Projects</a>
@@ -83,8 +83,9 @@
         <p>
           I'm an <strong>ML Systems &amp; Kernel Engineer at Neurealm</strong>, working on
           high-throughput <strong>TT-Metal kernels</strong> for matmul and FlashAttention,
-          and starting <strong>TI TDA54 software optimization</strong> for on-device LLM /
-          transformer inference on automotive SoCs.
+          <strong>TI TDA54</strong> model porting for on-device LLM / VLM inference, and
+          <strong>FarmPilot</strong> — a multi-agent board-farm system for test orchestration
+          and grounded root-cause analysis.
         </p>
         <p>
           Before that I was an <strong>AI Framework Engineer</strong> intern at
@@ -110,7 +111,7 @@
           <li><span>Current</span><strong>Engineer, ML Systems &amp; Kernel, Neurealm</strong></li>
           <li><span>Previous</span><strong>AI Framework Engineer, Intel</strong> <span class="intern-note">intern · June 2025 – May 2026</span></li>
           <li><span>Education</span><strong>M.Tech ML &amp; Computing, IIST (2024–2026)</strong></li>
-          <li><span>Focus</span><strong>LLM inference kernels · TT-Metal · TDA54 · Agentic AI</strong></li>
+          <li><span>Focus</span><strong>LLM inference kernels · TT-Metal · TDA54 · FarmPilot / Agentic AI</strong></li>
           <li><span>Award</span><strong>🏆 Hackathon Winner — Workshop on Systems for ML, IISc (2026)</strong></li>
           <li><span>Talk</span><strong>Selected presenter — INSPIRE 2026, IIST PG symposium</strong></li>
           <li><span>Certification</span><strong>CCAF — Claude Certified Architect: Foundations, Anthropic</strong></li>
@@ -140,21 +141,24 @@
           cut bank conflicts, and reduce tail latency in streaming token generation.
         </li>
         <li>
-          Implemented kernel-level <strong>normalization</strong> and precision-aware datapaths
-          with tiled L1/DRAM layouts and lock-free buffers — resolving concurrency and
-          fragmentation while keeping RMSNorm / softmax numerically stable for deterministic
-          inference.
+          Implemented kernel-level <strong>normalization</strong> (RMSNorm, softmax) and
+          precision-aware datapaths with tiled L1/DRAM layouts and lock-free buffers —
+          resolving concurrency and fragmentation while keeping numerical stability for
+          deterministic deep-learning inference.
         </li>
         <li>
-          Started <strong>TI TDA54 software optimization</strong> on the TDA5 automotive SoC
-          (C7 NPU + heterogeneous CPU/DSP fabric): profiling transformer and LLM/VLM kernels,
-          mapping tiled matmul and attention onto on-chip SRAM/DRAM, and tightening
-          end-to-end latency for on-vehicle inference.
+          Completed <strong>model porting</strong> of transformer and vision-language models onto
+          the <strong>TI TDA54</strong> automotive SoC (C7 NPU + heterogeneous CPU/DSP fabric):
+          ONNX Runtime export, quantization and pruning, tiled matmul/attention on on-chip SRAM,
+          and scheduling for edge / multi-step inference under real-time power and latency
+          constraints.
         </li>
         <li>
-          Building the software path for <strong>edge agentic workloads</strong> on TDA54 —
-          scheduling tool-using / multi-step inference under real-time and power constraints
-          rather than datacenter batch serving.
+          Built <strong>FarmPilot</strong>, a multi-agent board-farm chat system
+          (<strong>LangGraph</strong> + <strong>Ollama</strong>) for RACER test executions with
+          human-in-the-loop approval over device-service OpenAPI/<strong>MCP</strong> tools;
+          added a grounded root-cause agent (logs, case output, dmesg, GitLab evidence) plus
+          routing for whole-plan runs, retries, and automatic RCA after failed executions.
         </li>
       </ul>
       <div class="tag-row">
@@ -162,7 +166,10 @@
         <span class="tag">FlashAttention</span>
         <span class="tag">LLM Inference</span>
         <span class="tag">TI TDA54</span>
-        <span class="tag">C7 NPU</span>
+        <span class="tag">ONNX Runtime</span>
+        <span class="tag">FarmPilot</span>
+        <span class="tag">LangGraph</span>
+        <span class="tag">MCP</span>
         <span class="tag">Kernel Optimization</span>
       </div>
     </article>
